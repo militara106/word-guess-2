@@ -1,18 +1,19 @@
-function Letter(char){
+function Letter(char) {
     this.char = char;
     this.guessed = false;
 
-    this.write = function(){
-        if(this.guessed == false){
+    // Returns placeholder or letter based on guessed boolean
+    this.write = function () {
+        if (this.guessed == false) {
             return "_ ";
-        }
-        else{
-            return char+" ";
+        } else {
+            return char + " ";
         }
     }
 
-    this.check = function(guess){
-        if(this.char == guess){
+    // Checks if char is the same as guess
+    this.check = function (guess) {
+        if (this.char == guess) {
             this.guessed = true;
         }
         // console.log(this.guessed);
